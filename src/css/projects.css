@@ -1,0 +1,38 @@
+#projects_main{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+
+#tiles_div{
+    margin-bottom: 0px;
+    margin-top: auto;
+    width: 100%;
+    height: 20%;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tile{
+    cursor: pointer;
+    position: relative;
+    height: 90%;
+    width: 20%;
+    border: 1px solid white;
+    transform: rotate3d(0, 1, 0, 30deg);
+}
+
+.showcase_div{
+    opacity: 0%;
+    top: 50%;
+    left: 10%;
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    border: 1px solid white;
+    transform: scale(0.1);
+    transition: all 300ms ease-in;
+}
