@@ -1,0 +1,17 @@
+.tile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 200ms linear;
+}
+
+.tile_content{
+    width: 80%;
+    height: 90%;
+    background-color: rgb(70, 70, 70);
+    border-radius: 5px;
+    transition: transform 200ms;
+}
+.tile_content:hover{
+    transform: scale(1.2);
+}
