@@ -9,9 +9,34 @@
     width: 80%;
     height: 90%;
     background-color: rgb(70, 70, 70);
-    border-radius: 5px;
+    border-radius: 10px;
     transition: transform 200ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .tile_content:hover{
     transform: scale(1.2);
 }
+
+.tile_content:hover>i{
+    opacity: 0%;
+}
+
+.tile_content:hover>#calcSvg,
+.tile_content:hover>#tic_tac_toeSvg,
+.tile_content:hover>#toDoSvg,
+.tile_content:hover>#blogSvg,
+.tile_content:hover>#messageSvg{
+    opacity: 100%;
+}
+
+#calcSvg,#tic_tac_toeSvg,#toDoSvg,#blogSvg,#messageSvg{
+    position: absolute;
+    opacity: 0%;
+    height: 80%;
+    width: 60%;
+    transition: opacity 300ms;
+}
+
+

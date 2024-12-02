@@ -1,0 +1,64 @@
+
+#calc1{
+    animation: calc1 5s infinite ease-in;
+}
+
+@keyframes calc1 {
+    0%{opacity: 0%;}
+    5%{opacity: 100%;}
+    70%{opacity: 100%;}
+    90%{opacity: 0%;}
+    100%{opacity: 0%;}
+}
+
+#calc2{
+    animation: calc2 5s infinite ease-in;
+}
+
+@keyframes calc2 {
+    0%{opacity: 0%;}
+    10%{opacity: 0%;}
+    15%{opacity: 100%;}
+    70%{opacity: 100%;}
+    90%{opacity: 0%;}
+    100%{opacity: 0%;}
+}
+
+#calc3{
+    animation: calc3 5s infinite ease-in;
+}
+
+@keyframes calc3 {
+    0%{opacity: 0%;}
+    20%{opacity: 0%;}
+    25%{opacity: 100%;}
+    70%{opacity: 100%;}
+    90%{opacity: 0%;}
+    100%{opacity: 0%;}
+}
+
+#calc4{
+    animation: calc4 5s infinite ease-in;
+}
+
+@keyframes calc4 {
+    0%{opacity: 0%;}
+    30%{opacity: 0%;}
+    35%{opacity: 100%;}
+    70%{opacity: 100%;}
+    90%{opacity: 0%;}
+    100%{opacity: 0%;}
+}
+
+#calc5{
+    animation: calc5 5s infinite ease-in;
+}
+
+@keyframes calc5 {
+    0%{opacity: 0%;}
+    40%{opacity: 0%;}
+    45%{opacity: 100%;}
+    70%{opacity: 100%;}
+    90%{opacity: 0%;}
+    100%{opacity: 0%;}
+}

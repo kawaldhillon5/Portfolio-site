@@ -2,6 +2,12 @@ import { useEffect } from "react";
 import "../css/projects.css"
 import "../css/tile.css"
 
+import CalcSvg from "../components/calcSvgComp";
+import TicTacToeSvg from "../components/ticTacToe";
+import ToDoSvg from "../components/toDoSvg";
+import BlogSvg from "../components/blogSvg";
+import MessageSvg from "../components/messageSvg";
+
 export default function Projects() {
 
     useEffect(()=>{
@@ -44,7 +50,10 @@ export default function Projects() {
                 <div className="tile_content 01"
                     onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
                     onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}} 
-                ></div>
+                >   
+                    <i>Calculator</i>
+                    <CalcSvg />
+                </div>
              </div>
 
              <div className="tile 02">
@@ -52,7 +61,10 @@ export default function Projects() {
                 <div className="tile_content 02" 
                     onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
                     onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
-                ></div>  
+                >
+                    <i>Tic Tac Toe</i>
+                    <TicTacToeSvg />
+                </div>  
              </div>
 
              <div className="tile 03">
@@ -60,21 +72,30 @@ export default function Projects() {
                 <div className="tile_content 03"     
                     onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
                     onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
-                ></div>
+                >
+                    <i>To Do List</i>
+                    <ToDoSvg />
+                </div>
              </div>
              <div className="tile 04">
                 <div className="showcase_div show_04">tile04</div>
                 <div className="tile_content 04"
                     onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
                     onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
-                ></div>  
+                >
+                    <i>My Blog Site</i>
+                    <BlogSvg />    
+                </div>  
              </div>
              <div className="tile 05">
                 <div className="showcase_div show_05">tile05</div>
                 <div className="tile_content 05" 
                     onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
                     onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
-                ></div>  
+                >
+                    <i>Messaging App</i>
+                    < MessageSvg />
+                </div>  
              </div>
             </div>
         </div>

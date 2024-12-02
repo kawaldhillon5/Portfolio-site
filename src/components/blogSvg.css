@@ -1,0 +1,35 @@
+#blogText1{
+   animation: blog1 5s infinite ease;
+}
+
+@keyframes blog1 {
+    0%{opacity: 0%;}
+    20%{opacity: 0%;}
+    30%{opacity: 100%;}
+    90%{opacity: 100%;}
+    100%{opacity: 0%;}
+}
+
+#blogText2{
+    animation: blog2 5s infinite ease;
+ }
+ 
+ @keyframes blog2 {
+     0%{opacity: 0%;}
+     40%{opacity: 0%;}
+     50%{opacity: 100%;}
+     90%{opacity: 100%;}
+     100%{opacity: 0%;}
+ }
+
+ #blogArrow{
+    animation: blog3 5s infinite ease;
+ }
+ 
+ @keyframes blog3 {
+     0%{transform: translate3d(0, 0, 0);}
+     60%{transform: translate3d(0, 0, 0);}
+     70%{transform: translate3d(2px, -2px, 0);}
+     90%{transform: translate3d(2px, -2px, 0);}
+     100%{transform: translate3d(0, 0, 0);}
+ }

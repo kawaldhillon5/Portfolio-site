@@ -50,7 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(16, 16, 16);
     border-radius: 15px;
     overflow: hidden;
     transition: all 200ms;

@@ -1,0 +1,50 @@
+#tic3{
+    animation: tic1 5s infinite ease-in;
+}
+
+@keyframes tic1 {
+    0%{opacity: 0%;}
+    10%{opacity: 100%;}
+    70%{opacity: 100%;}
+    90%{opacity: 0%;}
+    100%{opacity: 0%;}
+}
+
+#tic2{
+    animation: tic2 5s infinite ease-in;
+}
+
+@keyframes tic2 {
+    0%{opacity: 0%;}
+    15%{opacity: 0%;}
+    20%{opacity: 100%;}
+    70%{opacity: 100%;}
+    90%{opacity: 0%;}
+    100%{opacity: 0%;}
+}
+
+ #tic1{
+    animation: tic3 5s infinite ease-in;
+}
+
+@keyframes tic3 {
+    0%{opacity: 0%;}
+    25%{opacity: 0%;}
+    30%{opacity: 100%;}
+    70%{opacity: 100%;}
+    90%{opacity: 0%;}
+    100%{opacity: 0%;}
+}
+
+#tic4{
+    animation: tic4 5s infinite ease-in;
+}
+
+@keyframes tic4 {
+    0%{opacity: 0%;}
+    35%{opacity: 0%;}
+    50%{opacity: 100%;}
+    70%{opacity: 100%;}
+    90%{opacity: 0%;}
+    100%{opacity: 0%;}
+} 
