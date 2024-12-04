@@ -1,11 +1,17 @@
 
+import { useEffect } from 'react';
 import calc1Sc from '../assets/imgs/calc1Sc.png';
 
 export default function CalcShowcase() {
+
+    useEffect(()=>{
+        document.querySelector('#calcImg1').setAttribute('style','opacity:100%');
+    })
+
     return(
         <>
             <div className="showCaseImgDiv">
-                <img className='showCaseImg' src={calc1Sc} alt="Image of the calculator from the project" />
+                <img className='showCaseImg' id='calcImg1' src={calc1Sc} alt="Image of the calculator from the project" />
                 <div className="showCaseTitle">Calculator</div>
             </div>
             <div className="showCaseText" id='calcShowCaseText'>
@@ -16,6 +22,10 @@ export default function CalcShowcase() {
                 <div id="calcShowCaseText2">
                     Some Difficulties that were incountered in developing 
                     this were the implementation of back and the dot(.) operation.  
+                </div>
+                <div id="calcShowCaseText3">
+                    Various decisions like the use of flexbox instead of grid to implement buttons for the app
+                    are discussed in the Explainer.   
                 </div>
             </div>
         </>

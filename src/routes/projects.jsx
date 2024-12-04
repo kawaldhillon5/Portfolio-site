@@ -8,6 +8,7 @@ import ToDoSvg from "../components/toDoSvg";
 import BlogSvg from "../components/blogSvg";
 import MessageSvg from "../components/messageSvg";
 import CalcShowcase from "../components/calcShowcase";
+import TicTacToeShowcase from "../components/TicTacToeShowcase";
 
 export default function Projects() {
 
@@ -60,7 +61,9 @@ export default function Projects() {
              </div>
 
              <div className="tile 02">
-                <div className="showcase_div show_02">tile02</div>
+                <div className="showcase_div show_02">
+                    <TicTacToeShowcase />
+                </div>
                 <div className="tile_content 02" 
                     onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
                     onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}

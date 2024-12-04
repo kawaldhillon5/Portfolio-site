@@ -120,6 +120,8 @@
     border-radius: 2px;
     width: auto;
     height: 60%;
+    opacity: 0%;
+    transition: opacity 300ms ease-in;
 }
 
 .showCaseText{
