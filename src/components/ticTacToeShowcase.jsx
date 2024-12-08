@@ -21,7 +21,16 @@ export default function TicTacToeShowcase() {
                 <div className="showCaseTitle">Tic Tac Toe</div>
             </div>
             <div className="showCaseText">
-                jhdfs
+                <div >
+                    The Classic Game of Tic Tac Toe, designed using JavaScript, HTML and CSS only. The goal was to understand basic app
+                     logic and provide simple, welcoming user Interface.    
+                </div>
+                <div>
+                    Game can be played between 2 players and after each round the board could be reset and played again.
+                </div>
+                <div >
+                    The key take away from this project was to not over complicate things that can be achieved using simple actions.
+                </div>
             </div>
         </>
     )
