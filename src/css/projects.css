@@ -86,6 +86,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+    font-size: 110%;
 }
 
 

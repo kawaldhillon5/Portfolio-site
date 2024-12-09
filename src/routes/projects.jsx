@@ -11,6 +11,7 @@ import CalcShowcase from "../components/calcShowcase";
 import TicTacToeShowcase from "../components/ticTacToeShowcase";
 import ToDoShowcase from "../components/toDoShowcase";
 import BlogShowcase from "../components/BlogShowcase";
+import ChatShowcase from "../components/chatShowcase";
 
 export default function Projects() {
 
@@ -45,7 +46,17 @@ export default function Projects() {
             <div id="center_info">
                 <div id="info_light"></div>
                 <div id="info_text">
-                    abc
+                    The Personal portfolio site is dedicated to demonstrating experience and skills accumulated
+                     by completing The Odin Project, A programe Geared towards gaining practical abilities to 
+                     become a Web Developer. The journey began with amatuer knowledge of C/C++ and with the 
+                     Project's help, functional web-apps were developed with best 
+                     coding practices in mind.
+                     
+                     <p>
+                        Tiles below Showcase Some Great Projects that significantly Improved the understanding of 
+                        various aspects of web developement throughout the journey.   
+                        Hover On The tile to see a short summary about the Project and click to learn more.
+                     </p>
                 </div>
             </div>
             <div id="tiles_div">
@@ -100,7 +111,9 @@ export default function Projects() {
                 </div>  
              </div>
              <div className="tile 05">
-                <div className="showcase_div show_05">tile05</div>
+                <div className="showcase_div show_05">
+                    <ChatShowcase />
+                </div>
                 <div className="tile_content 05" 
                     onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
                     onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
