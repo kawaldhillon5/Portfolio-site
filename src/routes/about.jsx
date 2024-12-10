@@ -5,10 +5,10 @@ export default function About(){
     useEffect(()=>{
         setTimeout(()=>{
             document.querySelector("#about_info").setAttribute("style","opacity:100%; transform: scale(100%)")
-        },800);
+        },500);
         setTimeout(()=>{
             document.querySelector("#intro_ani").setAttribute("style","opacity: 0%;");
-        },1000)
+        },700)
     });
 
     return (
