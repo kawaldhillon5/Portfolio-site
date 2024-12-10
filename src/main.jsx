@@ -8,6 +8,7 @@ import ErrorPage from "./routes/erro-page";
 import "./index.css";
 import Root from "./routes/root";
 import Projects from "./routes/projects";
+import About from "./routes/about";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/projects',
         element: <Projects />,
+      },
+      {
+        path: '/about',
+        element: <About />
       }
     ]
   }

@@ -20,8 +20,8 @@ export default function Root() {
                 <div id="header_title"><Link to={"/"}>ਕਵਲ ਢਿਲੋਂ</Link></div>
                 <div id="header_links">
                     <Link to={'projects'}>Projects</Link>
-                    <Link>Contact</Link>
-                    <Link>About</Link>
+                    <Link >Contact</Link>
+                    <Link to={'about'}>About</Link>
                 </div>    
             </header>
             

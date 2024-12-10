@@ -53,7 +53,7 @@ export default function Projects() {
                      coding practices in mind.
                      
                      <p>
-                        Tiles below Showcase Some Great Projects that significantly Improved the understanding of 
+                        Tiles below Showcase Some of many Great Projects that significantly Improved the understanding of 
                         various aspects of web developement throughout the journey.   
                         Hover On The tile to see a short summary about the Project and click to learn more.
                      </p>
