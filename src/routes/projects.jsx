@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../css/projects.css"
 import "../css/tile.css"
 
@@ -12,9 +12,19 @@ import TicTacToeShowcase from "../components/ticTacToeShowcase";
 import ToDoShowcase from "../components/toDoShowcase";
 import BlogShowcase from "../components/BlogShowcase";
 import ChatShowcase from "../components/chatShowcase";
+import TilesMobile from "../components/tilesMobileComp";
 
 export default function Projects() {
 
+    const [viewMode, setViewMode] = useState(1);
+    const aspect = function(){
+        const res = ((window.innerHeight > 0) ? window.innerHeight : screen.height)/((window.innerWidth > 0) ? window.innerWidth : screen.width);
+        return (res > 0.72) ? 0:1;
+    };
+     
+    window.addEventListener('resize',()=>{
+        setViewMode(aspect());
+    });
     useEffect(()=>{
         setTimeout(()=>{
             document.querySelector("#center_info").setAttribute("style","opacity:100%; transform: scale(100%)")
@@ -23,7 +33,7 @@ export default function Projects() {
         setTimeout(()=>{
             document.querySelector("#intro_ani").setAttribute("style","opacity: 0%;");
         },2200)
-    },[])
+    },[viewMode])
 
     function calcXtranslate(n, nth) {
         const total =   (n/2)+0.5;
@@ -59,70 +69,75 @@ export default function Projects() {
                      </p>
                 </div>
             </div>
-            <div id="tiles_div">
-             <div className="tile 01">
-                <div className="showcase_div show_01">
-                    <CalcShowcase />
+            {   (viewMode === 1) 
+                ? 
+                <div id="tiles_div">
+                <div className="tile 01">
+                    <div className="showcase_div show_01">
+                        <CalcShowcase />
+                    </div>
+                    <div className="tile_content 01"
+                        onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
+                        onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}} 
+                    >   
+                        <i>Calculator</i>
+                        <CalcSvg />
+                    </div>
                 </div>
-                <div className="tile_content 01"
-                    onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
-                    onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}} 
-                >   
-                    <i>Calculator</i>
-                    <CalcSvg />
-                </div>
-             </div>
 
-             <div className="tile 02">
-                <div className="showcase_div show_02">
-                    <TicTacToeShowcase />
+                <div className="tile 02">
+                    <div className="showcase_div show_02">
+                        <TicTacToeShowcase />
+                    </div>
+                    <div className="tile_content 02" 
+                        onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
+                        onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
+                    >
+                        <i>Tic Tac Toe</i>
+                        <TicTacToeSvg />
+                    </div>  
                 </div>
-                <div className="tile_content 02" 
-                    onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
-                    onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
-                >
-                    <i>Tic Tac Toe</i>
-                    <TicTacToeSvg />
-                </div>  
-             </div>
 
-             <div className="tile 03">
-                <div className="showcase_div show_03">
-                    <ToDoShowcase />
+                <div className="tile 03">
+                    <div className="showcase_div show_03">
+                        <ToDoShowcase />
+                    </div>
+                    <div className="tile_content 03"     
+                        onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
+                        onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
+                    >
+                        <i>To Do List</i>
+                        <ToDoSvg />
+                    </div>
                 </div>
-                <div className="tile_content 03"     
-                    onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
-                    onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
-                >
-                    <i>To Do List</i>
-                    <ToDoSvg />
+                <div className="tile 04">
+                    <div className="showcase_div show_04">
+                        <BlogShowcase />
+                    </div>
+                    <div className="tile_content 04"
+                        onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
+                        onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
+                    >
+                        <i>My Blog Site</i>
+                        <BlogSvg />    
+                    </div>  
                 </div>
-             </div>
-             <div className="tile 04">
-                <div className="showcase_div show_04">
-                    <BlogShowcase />
+                <div className="tile 05">
+                    <div className="showcase_div show_05">
+                        <ChatShowcase />
+                    </div>
+                    <div className="tile_content 05" 
+                        onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
+                        onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
+                    >
+                        <i>Messaging App</i>
+                        < MessageSvg />
+                    </div>  
                 </div>
-                <div className="tile_content 04"
-                    onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
-                    onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
-                >
-                    <i>My Blog Site</i>
-                    <BlogSvg />    
-                </div>  
-             </div>
-             <div className="tile 05">
-                <div className="showcase_div show_05">
-                    <ChatShowcase />
                 </div>
-                <div className="tile_content 05" 
-                    onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
-                    onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
-                >
-                    <i>Messaging App</i>
-                    < MessageSvg />
-                </div>  
-             </div>
-            </div>
+                : 
+                < TilesMobile />               
+                }
         </div>
     )
 }

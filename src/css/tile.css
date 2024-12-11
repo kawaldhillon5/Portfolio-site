@@ -8,12 +8,13 @@
 .tile_content{
     width: 80%;
     height: 90%;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(54, 54, 54);
     border-radius: 10px;
     transition: transform 200ms;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 .tile_content:hover{
     transform: scale(1.2);

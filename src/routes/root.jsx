@@ -1,9 +1,9 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import "../css/root.css"
 import { useEffect } from "react";
 
 export default function Root() {
-
+    const navigate = useNavigate();
     useEffect(()=>{
         setTimeout(()=>{document.querySelectorAll('.start_div').forEach((elm,i)=>{
             if(i === 0){
@@ -11,17 +11,36 @@ export default function Root() {
             } else {
                 elm.classList.add("start_bottom_c");
             }
-        })},1000)
+        })},1000);
+        navigate('/projects')
     },[])
 
     return (
         <>
             <header>
-                <div id="header_title"><Link to={"/"}>ਕਵਲ ਢਿਲੋਂ</Link></div>
+                <div id="header_title"><Link to={"/projects"}>ਕਵਲ ਢਿਲੋਂ</Link></div>
                 <div id="header_links">
-                    <Link to={'projects'}>Projects</Link>
-                    <Link to={'contact'}>Contact</Link>
-                    <Link to={'about'}>About</Link>
+                    <NavLink to={'projects'} className={({ isActive, isPending }) =>
+                      isActive
+                        ? "active"
+                        : isPending
+                        ? "pending"
+                        : ""
+                    }>Projects</NavLink>
+                    <NavLink to={'contact'} className={({ isActive, isPending }) =>
+                      isActive
+                        ? "active"
+                        : isPending
+                        ? "pending"
+                        : ""
+                    }>Contact</NavLink>
+                    <NavLink to={'about'}className={({ isActive, isPending }) =>
+                      isActive
+                        ? "active"
+                        : isPending
+                        ? "pending"
+                        : ""
+                    }>About</NavLink>
                 </div>    
             </header>
             

@@ -59,6 +59,7 @@
     border-radius: 15px;
     overflow: hidden;
     transition: all 200ms;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -123,10 +124,12 @@
     font-size: 40%;
 }
 
+
 .showCaseImg{
     border-radius: 2px;
-    width: auto;
-    height: 60%;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
     opacity: 0%;
     transition: opacity 300ms ease-in;
 }
@@ -181,5 +184,18 @@
     flex-direction: column;
     padding: 5%;
     font-size: 110%;
+    text-align: center;
+}
+
+.active{
+    border-bottom: 1px solid rgb(252, 252, 252);
+}
+
+#contact_title{
+    font-size: 150%;
+    border-bottom: 1px solid white;
+}
+
+.tile_content>i{
     text-align: center;
 }
