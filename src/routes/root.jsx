@@ -12,6 +12,11 @@ export default function Root() {
                 elm.classList.add("start_bottom_c");
             }
         })},1000);
+        setTimeout(()=>{
+            document.querySelectorAll('.start_div').forEach(elm =>{
+                elm.setAttribute('style',"display:none");
+            })
+        },1800)
         navigate('/projects')
     },[])
 

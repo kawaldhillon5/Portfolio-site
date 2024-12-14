@@ -3,29 +3,30 @@ import blogImg2 from '../assets/imgs/blogSc2.png';
 import blogImg3 from '../assets/imgs/blogSc3.png';
 import SlideShow from './slideShow';
 
-export default function BlogShowcase() {
+export default function BlogShowcase({viewMode}) {
+    const cls = viewMode ? "showCaseImg" : "showCaseImg_mobile";
     const imgSrcArr = [{src: blogImg1,
         alt: "Image showing Log In screen",
-        classname: "showCaseImg",
+        classname: cls,
         id: "blogImg1",
         },
         {src: blogImg3,
-         alt: "Image showing ",
-         classname: "showCaseImg",
+         alt: "Image showing blog creation ",
+         classname: cls,
          id: "blogImg2",
         },
         {src: blogImg2,
-            alt: "Image showing ",
-            classname: "showCaseImg",
+            alt: "Image showing requests for blogs",
+            classname: cls,
             id: "blogImg3",
         }]
     return(
         <>
-            <div className="showCaseImgDiv">
+            <div className={viewMode? "showCaseImgDiv": "showCaseImgDiv_mobile"}>
                 <SlideShow imgSrcArr={imgSrcArr} />
                 <div className="showCaseTitle">Blog Post Site</div>
             </div>
-            <div className="showCaseText">
+            <div className={viewMode? "showCaseText" :"showCaseText_mobile"}>
                 <div >
                     Blog Post Site was the first big Full-Stack project, that had Authentication, Database support and a
                     content management tool(tinyMCE).   

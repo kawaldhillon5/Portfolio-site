@@ -3,24 +3,25 @@ import SlideShow from "./slideShow";
 import ticImg1 from "../assets/imgs/ticTacToeShow1.png";
 import ticImg2 from "../assets/imgs/ticTacToeShow2.png";
 
-export default function TicTacToeShowcase() {
+export default function TicTacToeShowcase({viewMode}) {
+    const cls = viewMode ? "showCaseImg" : "showCaseImg_mobile";
     const imgSrcArr = [{src: ticImg1,
                         alt: "Image showing a form for choosing player names and player symbol",
-                        classname: "showCaseImg",
+                        classname: cls,
                         id: "ticImgShow1",
                         },
                         {src: ticImg2,
                          alt: "Image showing a game of tic tac toe being played",
-                         classname: "showCaseImg",
+                         classname: cls,
                          id: "ticImgShow2",
                         }]
     return(
         <>
-            <div className="showCaseImgDiv">
+            <div className={viewMode? "showCaseImgDiv": "showCaseImgDiv_mobile"}>
                 <SlideShow imgSrcArr={imgSrcArr} />
                 <div className="showCaseTitle">Tic Tac Toe</div>
             </div>
-            <div className="showCaseText">
+            <div className={viewMode? "showCaseText" :"showCaseText_mobile"}>
                 <div >
                     The Classic Game of Tic Tac Toe, designed using JavaScript, HTML and CSS only. The goal was to understand basic app
                      logic and provide simple, welcoming user Interface.    

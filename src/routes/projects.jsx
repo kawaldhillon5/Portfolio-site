@@ -16,12 +16,13 @@ import TilesMobile from "../components/tilesMobileComp";
 
 export default function Projects() {
 
-    const [viewMode, setViewMode] = useState(1);
     const aspect = function(){
         const res = ((window.innerHeight > 0) ? window.innerHeight : screen.height)/((window.innerWidth > 0) ? window.innerWidth : screen.width);
         return (res > 0.72) ? 0:1;
     };
-     
+
+    const [viewMode, setViewMode] = useState(aspect());
+  
     window.addEventListener('resize',()=>{
         setViewMode(aspect());
     });
@@ -51,11 +52,15 @@ export default function Projects() {
 
 
     return (
-        <div id="projects_main">
-            <div className="animate" id="intro_ani"></div>
-            <div id="center_info">
-                <div id="info_light"></div>
-                <div id="info_text">
+        <div id={viewMode ? "projects_main" : "projects_main_mobile"}>
+            <div className="animate" id={viewMode ? "intro_ani" : "intro_ani_mobile"}></div>
+            
+            {   (viewMode === 1) 
+                ?
+                <>
+                <div id="center_info">
+                    <div id="info_light"></div>
+                    <div id="info_text">
                     The Personal portfolio site is dedicated to demonstrating experience and skills accumulated
                      by completing The Odin Project, A programe Geared towards gaining practical abilities to 
                      become a Web Developer. The journey began with amatuer knowledge of C/C++ and with the 
@@ -67,14 +72,12 @@ export default function Projects() {
                         various aspects of web developement throughout the journey.   
                         Hover On The tile to see a short summary about the Project and click to learn more.
                      </p>
-                </div>
-            </div>
-            {   (viewMode === 1) 
-                ? 
+                    </div>
+                </div> 
                 <div id="tiles_div">
                 <div className="tile 01">
                     <div className="showcase_div show_01">
-                        <CalcShowcase />
+                        <CalcShowcase  viewMode={viewMode}/>
                     </div>
                     <div className="tile_content 01"
                         onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
@@ -87,7 +90,7 @@ export default function Projects() {
 
                 <div className="tile 02">
                     <div className="showcase_div show_02">
-                        <TicTacToeShowcase />
+                        <TicTacToeShowcase viewMode={viewMode} />
                     </div>
                     <div className="tile_content 02" 
                         onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
@@ -100,7 +103,7 @@ export default function Projects() {
 
                 <div className="tile 03">
                     <div className="showcase_div show_03">
-                        <ToDoShowcase />
+                        <ToDoShowcase viewMode={viewMode} />
                     </div>
                     <div className="tile_content 03"     
                         onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
@@ -112,7 +115,7 @@ export default function Projects() {
                 </div>
                 <div className="tile 04">
                     <div className="showcase_div show_04">
-                        <BlogShowcase />
+                        <BlogShowcase viewMode={viewMode}/>
                     </div>
                     <div className="tile_content 04"
                         onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
@@ -124,7 +127,7 @@ export default function Projects() {
                 </div>
                 <div className="tile 05">
                     <div className="showcase_div show_05">
-                        <ChatShowcase />
+                        <ChatShowcase  viewMode={viewMode}/>
                     </div>
                     <div className="tile_content 05" 
                         onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
@@ -135,8 +138,41 @@ export default function Projects() {
                     </div>  
                 </div>
                 </div>
+                </>
                 : 
-                < TilesMobile />               
+                <div id="projects_mobile">       
+                    <div id="center_info_mobile">
+                        <div id= "info_light_mobile"></div>
+                        <div id= "info_text_mobile">
+                        The Personal portfolio site is dedicated to demonstrating experience and skills accumulated
+                        by completing The Odin Project, A programe Geared towards gaining practical abilities to 
+                        become a Web Developer. The journey began with amatuer knowledge of C/C++ and with the 
+                        Project's help, functional web-apps were developed with best 
+                        coding practices in mind.
+                        
+                        <p>
+                            Tiles below Showcase Some of many Great Projects that significantly Improved the understanding of 
+                            various aspects of web developement throughout the journey.   
+                            Hover On The tile to see a short summary about the Project and click to learn more.
+                        </p>
+                        </div>
+                    </div> 
+                    <div className="showcase_mobile">
+                        <CalcShowcase viewMode={viewMode} />
+                    </div>
+                    <div className="showcase_mobile">
+                        < TicTacToeShowcase  viewMode={viewMode}/>
+                    </div>
+                    <div className="showcase_mobile">
+                        <ToDoShowcase  viewMode={viewMode}/>
+                    </div>
+                    <div className="showcase_mobile">
+                        < BlogShowcase  viewMode={viewMode}/>
+                    </div>
+                    <div className="showcase_mobile">
+                        < ChatShowcase viewMode={viewMode}/>
+                    </div>
+                </div>           
                 }
         </div>
     )
