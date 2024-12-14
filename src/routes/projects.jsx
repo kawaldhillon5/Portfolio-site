@@ -12,7 +12,6 @@ import TicTacToeShowcase from "../components/ticTacToeShowcase";
 import ToDoShowcase from "../components/toDoShowcase";
 import BlogShowcase from "../components/BlogShowcase";
 import ChatShowcase from "../components/chatShowcase";
-import TilesMobile from "../components/tilesMobileComp";
 
 export default function Projects() {
 
@@ -153,7 +152,7 @@ export default function Projects() {
                         <p>
                             Tiles below Showcase Some of many Great Projects that significantly Improved the understanding of 
                             various aspects of web developement throughout the journey.   
-                            Hover On The tile to see a short summary about the Project and click to learn more.
+                            Click on the tiles to learn more.
                         </p>
                         </div>
                     </div> 

@@ -101,7 +101,7 @@ footer>span{
     top: 0;
     align-items: flex-end;
     font-size: 250%;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     color: black;
 }
 
