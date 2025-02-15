@@ -79,49 +79,58 @@ export default function Projects() {
                         <CalcShowcase  viewMode={viewMode}/>
                     </div>
                     <div className="tile_content 01"
-                        onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
-                        onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}} 
-                    >   
-                        <i>Calculator</i>
-                        <CalcSvg />
+                        onMouseEnter={(e)=>{onTileMouseIn(e.target.parentNode.className )}}
+                        onMouseLeave={(e)=>{onTileMouseOut(e.target.parentNode.className)}} 
+                    >
+                        <a href="https://kawaldhillon5.github.io/TOP_calculator/" target='_blank'>  
+                            <i>Calculator</i>
+                            <CalcSvg />
+                        </a>
                     </div>
                 </div>
 
                 <div className="tile 02">
                     <div className="showcase_div show_02">
-                        <TicTacToeShowcase viewMode={viewMode} />
+                        <ToDoShowcase viewMode={viewMode} />
                     </div>
-                    <div className="tile_content 02" 
-                        onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
-                        onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
+                    <div className="tile_content 02"     
+                        onMouseEnter={(e)=>{onTileMouseIn(e.target.parentNode.className)}}
+                        onMouseLeave={(e)=>{onTileMouseOut(e.target.parentNode.className)}}
                     >
-                        <i>Tic Tac Toe</i>
-                        <TicTacToeSvg />
-                    </div>  
+                        <a href="https://kawaldhillon5.github.io/TOP_Todo_list/" target='_blank'>  
+                            <i>To Do List</i>
+                            <ToDoSvg />
+                        </a>
+                    </div>
                 </div>
 
                 <div className="tile 03">
+                   
                     <div className="showcase_div show_03">
-                        <ToDoShowcase viewMode={viewMode} />
+                        <TicTacToeShowcase viewMode={viewMode} />
                     </div>
-                    <div className="tile_content 03"     
-                        onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
-                        onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
-                    >
-                        <i>To Do List</i>
-                        <ToDoSvg />
-                    </div>
+                    <div className="tile_content 03" 
+                        onMouseEnter={(e)=>{onTileMouseIn(e.target.parentNode.className )}}
+                        onMouseLeave={(e)=>{onTileMouseOut(e.target.parentNode.className)}}
+                    >   
+                        <a href="https://tictactoe0511.netlify.app/" target='_blank'>
+                            <i>Tic Tac Toe</i>
+                            <TicTacToeSvg />
+                        </a>
+                    </div>  
                 </div>
                 <div className="tile 04">
                     <div className="showcase_div show_04">
                         <BlogShowcase viewMode={viewMode}/>
                     </div>
                     <div className="tile_content 04"
-                        onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
-                        onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
+                        onMouseEnter={(e)=>{onTileMouseIn(e.target.parentNode.className )}}
+                        onMouseLeave={(e)=>{onTileMouseOut(e.target.parentNode.className)}}
                     >
-                        <i>My Blog Site</i>
-                        <BlogSvg />    
+                        <a href="https://blogpostsite-kawal.netlify.app/" target='_blank'>
+                            <i>My Blog Site</i>
+                            <BlogSvg />
+                        </a>    
                     </div>  
                 </div>
                 <div className="tile 05">
@@ -129,11 +138,13 @@ export default function Projects() {
                         <ChatShowcase  viewMode={viewMode}/>
                     </div>
                     <div className="tile_content 05" 
-                        onMouseEnter={(e)=>{onTileMouseIn(e.target.className )}}
-                        onMouseLeave={(e)=>{onTileMouseOut(e.target.className)}}
+                        onMouseEnter={(e)=>{onTileMouseIn(e.target.parentNode.className )}}
+                        onMouseLeave={(e)=>{onTileMouseOut(e.target.parentNode.className)}}
                     >
-                        <i>Messaging App</i>
-                        < MessageSvg />
+                        <a href="https://github.com/kawaldhillon5/messagin-app-client" target='_blank'>
+                            <i>Messaging App</i>
+                            < MessageSvg />
+                        </a>
                     </div>  
                 </div>
                 </div>

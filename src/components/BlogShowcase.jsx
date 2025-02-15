@@ -6,17 +6,17 @@ import SlideShow from './slideShow';
 export default function BlogShowcase({viewMode}) {
     const cls = viewMode ? "showCaseImg" : "showCaseImg_mobile";
     const imgSrcArr = [{src: blogImg1,
-        alt: "Image showing Log In screen",
+        alt: "Image showing Home Screen of blog-site",
         classname: cls,
         id: "blogImg1",
         },
         {src: blogImg3,
-         alt: "Image showing blog creation ",
+         alt: "Image showing a blog ",
          classname: cls,
          id: "blogImg2",
         },
         {src: blogImg2,
-            alt: "Image showing requests for blogs",
+            alt: "Image showing about section of the site",
             classname: cls,
             id: "blogImg3",
         }]
@@ -32,7 +32,7 @@ export default function BlogShowcase({viewMode}) {
                     content management tool(tinyMCE).   
                 </div>
                 <div>
-                  The Site can be used to read and write blogs at the moment, some of the features like comments and likes are in developement
+                  The Site can be used to read and write blogs, Users can create an account to Vote or commnet on blogs
                 </div>
                 <div>
                     A lot of new real-world experiences were gained during the developent, especially with Authentication

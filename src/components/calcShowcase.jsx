@@ -17,15 +17,14 @@ export default function CalcShowcase({viewMode}) {
             <div className={viewMode? "showCaseText" :"showCaseText_mobile"} id='calcShowCaseText'>
                 <div id="calcShowCaseText1">
                     A Simple Calculator App in which one can Add, Subtract, Multiply and Divide.
-                     This was the first project that required a good amount of Javascript for a beginner project.
+                    This was the first project that required a good amount of Javascript for a beginner project.
                 </div>
                 <div id="calcShowCaseText2">
                     Some Difficulties that were incountered in developing 
                     this were the implementation of back and the dot(.) operation.  
                 </div>
                 <div id="calcShowCaseText3">
-                    Various decisions like the use of flexbox instead of grid to implement buttons for the app
-                    are discussed in the Explainer.   
+                    This was a great beginner project, which helped grasp the relation of javascript with Dom.   
                 </div>
             </div>
         </>
