@@ -127,7 +127,7 @@ export default function Projects() {
                         onMouseEnter={(e)=>{onTileMouseIn(e.target.parentNode.className )}}
                         onMouseLeave={(e)=>{onTileMouseOut(e.target.parentNode.className)}}
                     >
-                        <a href="https://blogpostsite-kawal.netlify.app/" target='_blank'>
+                        <a href="https://github.com/kawaldhillon5/blogpost-client" target='_blank'>
                             <i>My Blog Site</i>
                             <BlogSvg />
                         </a>    
