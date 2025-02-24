@@ -20,19 +20,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
 }
-#projects_mobile{
+#projects_mobile-home{
     margin: 1%;
     flex: 1;
-    position: relative;
     max-width: 95%;
-    min-height: 700%;
-    max-height: 700%;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 #tiles_div{
@@ -89,6 +85,8 @@
 }
 
 #center_info_mobile{
+    transform: scale(1%);
+    opacity: 0%;
     height: 90%;
     position: relative;
     width: clamp(300px,100%,900px);
@@ -163,6 +161,12 @@
     height: 10%;
     background-color: aliceblue;
     border-radius: 5px;
+}
+
+@media(max-width: 499px){
+    #intro_ani{
+        width: 8%;
+    }
 }
 
 .animate{
@@ -288,6 +292,7 @@
     font-size: 150%;
 }
 .showCaseText_mobile{
+    padding: 3%;
     margin-top: 3%;
     min-height: 50%;
     display: flex;

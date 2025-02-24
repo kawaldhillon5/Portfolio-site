@@ -10,6 +10,7 @@ import Root from "./routes/root";
 import Projects from "./routes/projects";
 import About from "./routes/about";
 import Contact from "./routes/contact";
+import ProjectMobile from "./routes/projectsMobile";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: '/projects',
         element: <Projects />,
+      },
+      {
+        path: '/projects-mobile',
+        element: <ProjectMobile />
       },
       {
         path: '/about',

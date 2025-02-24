@@ -12,24 +12,24 @@ import TicTacToeShowcase from "../components/ticTacToeShowcase";
 import ToDoShowcase from "../components/toDoShowcase";
 import BlogShowcase from "../components/BlogShowcase";
 import ChatShowcase from "../components/chatShowcase";
+import { useOutletContext } from "react-router-dom";
 
 export default function Projects() {
 
-    const aspect = function(){
-        const res = ((window.innerHeight > 0) ? window.innerHeight : screen.height)/((window.innerWidth > 0) ? window.innerWidth : screen.width);
-        return (res > 0.72) ? 0:1;
-    };
+    const viewMode = useOutletContext();
 
-    const [viewMode, setViewMode] = useState(aspect());
-  
-    window.addEventListener('resize',()=>{
-        setViewMode(aspect());
-    });
     useEffect(()=>{
-        setTimeout(()=>{
-            document.querySelector("#center_info").setAttribute("style","opacity:100%; transform: scale(100%)")
-            document.querySelector("#tiles_div").setAttribute("style","opacity:100%; transform: scale(1); margin-bottom: 0px");
-        },2000);
+        document.querySelector("#intro_ani").setAttribute("style","opacity: 100%;");
+        if(viewMode === 1){
+            setTimeout(()=>{
+                document.querySelector("#center_info").setAttribute("style","opacity:100%; transform: scale(100%)")
+                document.querySelector("#tiles_div").setAttribute("style","opacity:100%; transform: scale(1); margin-bottom: 0px");
+            },2000);
+        } else {
+            setTimeout(()=>{
+                document.querySelector("#center_info_mobile").setAttribute("style","opacity:100%; transform: scale(100%)")
+            },2000)
+        }
         setTimeout(()=>{
             document.querySelector("#intro_ani").setAttribute("style","opacity: 0%;");
         },2200)
@@ -52,7 +52,7 @@ export default function Projects() {
 
     return (
         <div id={viewMode ? "projects_main" : "projects_main_mobile"}>
-            <div className="animate" id={viewMode ? "intro_ani" : "intro_ani_mobile"}></div>
+            <div className="animate" id="intro_ani"></div>
             
             {   (viewMode === 1) 
                 ?
@@ -150,7 +150,6 @@ export default function Projects() {
                 </div>
                 </>
                 : 
-                <div id="projects_mobile">       
                     <div id="center_info_mobile">
                         <div id= "info_light_mobile"></div>
                         <div id= "info_text_mobile">
@@ -166,23 +165,7 @@ export default function Projects() {
                             Click on the tiles to learn more.
                         </p>
                         </div>
-                    </div> 
-                    <div className="showcase_mobile">
-                        <CalcShowcase viewMode={viewMode} />
-                    </div>
-                    <div className="showcase_mobile">
-                        < TicTacToeShowcase  viewMode={viewMode}/>
-                    </div>
-                    <div className="showcase_mobile">
-                        <ToDoShowcase  viewMode={viewMode}/>
-                    </div>
-                    <div className="showcase_mobile">
-                        < BlogShowcase  viewMode={viewMode}/>
-                    </div>
-                    <div className="showcase_mobile">
-                        < ChatShowcase viewMode={viewMode}/>
-                    </div>
-                </div>           
+                    </div>  
                 }
         </div>
     )

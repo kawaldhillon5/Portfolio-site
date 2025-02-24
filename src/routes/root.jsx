@@ -1,9 +1,30 @@
-import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
+import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import "../css/root.css"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Root() {
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const aspect = function(){
+        const res = ((window.innerHeight > 0) ? window.innerHeight : screen.height)/((window.innerWidth > 0) ? window.innerWidth : screen.width);
+        return (res > 0.72) ? 0:1;
+    };
+
+    const [viewMode, setViewMode] = useState(aspect());
+  
+    window.addEventListener('resize',()=>{
+        setViewMode(aspect());
+    });
+
+    useEffect(()=>{
+        if(viewMode == 1){
+            if(location.pathname === "/projects-mobile"){
+                navigate('/projects');
+            }
+        }
+    },[viewMode]);
+
     useEffect(()=>{
         setTimeout(()=>{document.querySelectorAll('.start_div').forEach((elm,i)=>{
             if(i === 0){
@@ -25,13 +46,22 @@ export default function Root() {
             <header>
                 <div id="header_title"><Link to={"/projects"}>ਕਵਲ ਢਿਲੋਂ</Link></div>
                 <div id="header_links">
-                    <NavLink to={'projects'} className={({ isActive, isPending }) =>
-                      isActive
-                        ? "active"
-                        : isPending
-                        ? "pending"
-                        : ""
-                    }>Projects</NavLink>
+                    {viewMode === 1 ? 
+                        <NavLink to={'projects'} className={({ isActive, isPending }) =>
+                        isActive
+                            ? "active"
+                            : isPending
+                            ? "pending"
+                            : ""
+                        }>Projects</NavLink>
+                    : <NavLink to={'projects-mobile'} className={({ isActive, isPending }) =>
+                        isActive
+                            ? "active"
+                            : isPending
+                            ? "pending"
+                            : ""
+                        }>Projects</NavLink>
+                    }
                     <NavLink to={'contact'} className={({ isActive, isPending }) =>
                       isActive
                         ? "active"
@@ -50,7 +80,7 @@ export default function Root() {
             </header>
             
             <div id="content">
-                <Outlet />
+                <Outlet context={viewMode} />
             </div>
 
             <footer>

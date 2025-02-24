@@ -1,0 +1,105 @@
+
+.container {
+    opacity: 0;
+    transform: scale(1%);
+    display: block;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    transition: all ease-in-out 200ms;
+}
+
+.gear {
+    box-sizing: border-box; 
+}
+
+#upper-div-main{
+    overflow: hidden;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 200px;
+}
+
+#upper-div-main>#mProject05{
+    margin-left: 20%;
+}
+
+#upper-div-main>#mProject01{
+    margin-right: 20%;
+}
+
+.mobile-project-showcase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 70%;
+    overflow: auto;
+    background-color: rgb(63, 63, 63);
+    border-radius: 15px;
+    height: 50%;
+    min-width: 60%;
+    transition: all 0.4s ease-out;
+}
+
+.mobile-project-showcase.project-snapped { /* ADDED: Style for snapped tile */
+    transform: scale(1.5); /* Scale up the snapped tile */
+    height: 63%;
+}
+
+
+#lower-div-main{
+    overflow: auto;
+    height: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 80px;
+
+    scroll-snap-type: x mandatory; /* ADD THIS: Enable horizontal scroll snap - mandatory snap */
+    scroll-snap-stop: always; /* ADD THIS: Ensure snapping occurs every time */
+    -webkit-overflow-scrolling: touch; /* ADD THIS: Enable smooth scrolling on iOS */
+    scroll-padding-inline: 10%;
+}
+
+#lower-div-main>#tile01{
+    margin-left: 25%;
+}
+
+#lower-div-main>#tile05{
+    margin-right: 25%;
+}
+
+.tile-mobile{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+    overflow: auto;
+    min-width: 50%;
+    height: 40%;
+    border-radius: 15px;
+    scroll-snap-align: center;
+    transition: transform 0.1s ease-out;
+    background-color: rgb(75, 75, 75);
+}
+
+.tile-mobile>a{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.tile-mobile.tile-snapped>a>i{
+    opacity: 0%;
+}
+
+.tile-mobile.tile-snapped { /* ADDED: Style for snapped tile */
+    overflow: hidden;
+    transform: scale(1.5); /* Scale up the snapped tile */
+}

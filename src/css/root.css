@@ -20,7 +20,7 @@
     position: relative;
     width: 100%;
     min-height: 75%;
-    max-height: 75%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,4 +118,10 @@ footer>span{
     bottom: 0;
     align-items: start;
     font-size: 300%;
+}
+
+@media(max-width: 500px){
+    #header_links>a:hover{
+        color: aliceblue;
+    }
 }

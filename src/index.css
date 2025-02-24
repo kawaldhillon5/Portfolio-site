@@ -90,3 +90,12 @@ a{
   text-decoration: none;
   color: #f9f9f9;
 }
+
+@media(max-width: 499px) {
+  #root{
+    gap: 0px;
+  }
+  header{
+    margin-bottom: 15%;
+  }
+}
