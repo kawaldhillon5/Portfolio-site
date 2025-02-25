@@ -1,6 +1,7 @@
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import "../css/root.css"
 import { useEffect, useState } from "react";
+import { FaGithub } from "react-icons/fa";
 
 export default function Root() {
     const navigate = useNavigate();
@@ -84,7 +85,7 @@ export default function Root() {
             </div>
 
             <footer>
-                <span>By</span>
+                <span><FaGithub /></span>
                 <a href="https://github.com/kawaldhillon5" target="_blank" >Kawal dhillon</a>
             </footer>
             <div className="start_div" id="start_top">Kawal Dhillon</div>
