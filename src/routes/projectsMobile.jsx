@@ -28,7 +28,7 @@ function ProjectMobile() {
   useEffect(() => { // useEffect hook for side effects (like event listeners)
     const lowerDivMain = lowerDivMainRef.current; // Get the DOM element from the ref
     const upperDivMain = document.getElementById('upper-div-main'); // Directly get upperDivMain - consider useRef for this too in larger apps
-    const tiles = document.querySelectorAll('.tile-mobile'); 
+    const tiles = document.querySelectorAll('.tile-mobile-container'); 
     const projects = document.querySelectorAll('.mobile-project-showcase');
 
     const upperScrollWidth = upperDivMain.scrollWidth - upperDivMain.clientWidth;   // Calculate max horizontal scroll width of upperDivMain
@@ -52,7 +52,7 @@ function ProjectMobile() {
 
             const tileCenter = rect.left + rect.width / 2;
             const containerCenter = containerRect.left + containerRect.width / 2;
-            const threshold = containerRect.width / 3;
+            const threshold = containerRect.width / 20;
 
             if (Math.abs(tileCenter - containerCenter) < threshold) {
                 tile.classList.add('tile-snapped');
@@ -70,7 +70,7 @@ function ProjectMobile() {
     
             const tileCenter = rect.left + rect.width / 2;
             const containerCenter = containerRect.left + containerRect.width / 2;
-            const threshold = containerRect.width / 3; 
+            const threshold = containerRect.width / 20; 
     
             if (Math.abs(tileCenter - containerCenter) < threshold) { 
                 project.classList.add('project-snapped'); 
@@ -112,34 +112,45 @@ function ProjectMobile() {
         </div>
 
         <div id="lower-div-main" className="gear" ref={lowerDivMainRef}> {/* Add ref to lowerDivMain */}
-            <div className="tile-mobile project-tile tile-snapped" id="tile01" data-project-id="1">                        
-                <a href="https://kawaldhillon5.github.io/TOP_calculator/" target='_blank'>  
-                    <i>Calculator</i>
-                    <CalcSvg />
-                </a>
+            <div className="tile-mobile-container tile-snapped">
+                <div className="tile-mobile project-tile tile-snapped" id="tile01" data-project-id="1">
+                    <a href="https://kawaldhillon5.github.io/TOP_calculator/" target='_blank'>
+                        <i>Calculator</i>
+                        <CalcSvg />
+                    </a>
+                </div>
             </div>
-            <div className="tile-mobile project-tile" id="tile02" data-project-id="2">
-                <a href="https://kawaldhillon5.github.io/TOP_Todo_list/" target='_blank'>  
-                    <i>To Do List</i>
-                    <ToDoSvg />
-                </a></div>
-            <div className="tile-mobile project-tile" id="tile03" data-project-id="3">
-                <a href="https://tictactoe0511.netlify.app/" target='_blank'>
-                        <i>Tic Tac Toe</i>
-                        <TicTacToeSvg />
-                </a>    
+            <div className="tile-mobile-container">
+                <div className="tile-mobile project-tile" id="tile02" data-project-id="2">
+                    <a href="https://kawaldhillon5.github.io/TOP_Todo_list/" target='_blank'>
+                        <i>To Do List</i>
+                        <ToDoSvg />
+                    </a>
+                </div>
             </div>
-            <div className="tile-mobile project-tile" id="tile04" data-project-id="4">
-                <a href="https://github.com/kawaldhillon5/blogpost-client" target='_blank'>
-                    <i>My Blog Site</i>
-                    <BlogSvg />
-                </a>
+            <div className="tile-mobile-container">
+                <div className="tile-mobile project-tile" id="tile03" data-project-id="3">
+                    <a href="https://tictactoe0511.netlify.app/" target='_blank'>
+                            <i>Tic Tac Toe</i>
+                            <TicTacToeSvg />
+                    </a>
+                </div>
             </div>
-            <div className="tile-mobile project-tile" id="tile05" data-project-id="5">
-                <a href="https://github.com/kawaldhillon5/messagin-app-client" target='_blank'>
-                    <i>Messaging App</i>
-                    < MessageSvg />
-                </a>                
+            <div className="tile-mobile-container">
+                <div className="tile-mobile project-tile" id="tile04" data-project-id="4">
+                    <a href="https://github.com/kawaldhillon5/blogpost-client" target='_blank'>
+                        <i>My Blog Site</i>
+                        <BlogSvg />
+                    </a>
+                </div>
+            </div>
+            <div className="tile-mobile-container">
+                <div className="tile-mobile project-tile" id="tile05" data-project-id="5">
+                    <a href="https://github.com/kawaldhillon5/messagin-app-client" target='_blank'>
+                        <i>Messaging App</i>
+                        < MessageSvg />
+                    </a>
+                </div>
             </div>
         </div>
         </div>

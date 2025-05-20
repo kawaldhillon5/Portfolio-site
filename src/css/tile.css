@@ -50,11 +50,11 @@
     transition: opacity 300ms;
 }
 
-#tile01.tile-snapped>a>svg,
-#tile02.tile-snapped>a>svg,
-#tile03.tile-snapped>a>svg,
-#tile04.tile-snapped>a>svg,
-#tile05.tile-snapped>a>svg{
+.tile-snapped>#tile01>a>svg,
+.tile-snapped>#tile02>a>svg,
+.tile-snapped>#tile03>a>svg,
+.tile-snapped>#tile04>a>svg,
+.tile-snapped>#tile05>a>svg{
 
     opacity: 100%;
     height: 70%;
