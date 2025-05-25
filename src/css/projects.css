@@ -58,6 +58,7 @@
     width: 100%;
     height: 70%;
     /* border: 1px solid white; */
+    -webkit-transform: scale(0.1);
     transform: scale(0.1);
     transition: all 400ms ease-in;
     display: flex;
@@ -68,6 +69,7 @@
 
 
 #center_info{
+    -webkit-transform: scale(1%);
     transform: scale(1%);
     opacity: 0%;
     position: relative;
