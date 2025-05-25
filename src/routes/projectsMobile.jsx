@@ -29,7 +29,7 @@ function ProjectMobile() {
     const lowerDivMain = lowerDivMainRef.current; // Get the DOM element from the ref
     const upperDivMain = document.getElementById('upper-div-main'); // Directly get upperDivMain - consider useRef for this too in larger apps
     const tiles = document.querySelectorAll('.tile-mobile-container'); 
-    const projects = document.querySelectorAll('.mobile-project-showcase');
+    const projects = document.querySelectorAll('.mobile-project-showcase-container');
 
     const upperScrollWidth = upperDivMain.scrollWidth - upperDivMain.clientWidth;   // Calculate max horizontal scroll width of upperDivMain
     upperDivMain.scrollLeft = upperScrollWidth;
@@ -94,20 +94,30 @@ function ProjectMobile() {
         <div className="animate" id="intro_ani"></div>
         <div className="container">
         <div id="upper-div-main" className="gear"> {/* Keep id for now, consider refactoring later */}
-            <div className="mobile-project-showcase" id="mProject05">
-                <ChatShowcase />
+            <div className="mobile-project-showcase-container">
+                <div className="mobile-project-showcase" id="mProject05">
+                    <ChatShowcase />
+                </div>
             </div>
-            <div className="mobile-project-showcase" id="mProject04" >
-                <BlogShowcase />
+            <div className="mobile-project-showcase-container">
+                <div className="mobile-project-showcase" id="mProject04" >
+                    <BlogShowcase />
+                </div>
             </div>
-            <div className="mobile-project-showcase" id="mProject03" >
-                <TicTacToeShowcase />
+            <div className="mobile-project-showcase-container">
+                <div className="mobile-project-showcase" id="mProject03" >
+                    <TicTacToeShowcase />
+                </div>
             </div>
-            <div className="mobile-project-showcase" id="mProject02" >
-                <ToDoShowcase />
+            <div className="mobile-project-showcase-container">
+                <div className="mobile-project-showcase" id="mProject02" >
+                    <ToDoShowcase />
+                </div>
             </div>
-            <div className="mobile-project-showcase" id="mProject01" >
-                <CalcShowcase  viewMode={viewMode}/>
+            <div className="mobile-project-showcase-container">
+                <div className="mobile-project-showcase" id="mProject01" >
+                    <CalcShowcase  viewMode={viewMode}/>
+                </div>
             </div>
         </div>
 

@@ -16,37 +16,41 @@
 #upper-div-main{
     overflow: hidden;
     height: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 200px;
 }
 
-#upper-div-main>#mProject05{
-    margin-left: 20%;
-}
 
-#upper-div-main>#mProject01{
-    margin-right: 20%;
-}
 
-.mobile-project-showcase{
+.mobile-project-showcase-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+
+.mobile-project-showcase{
+    width: 60%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
-    font-size: 70%;
-    overflow: auto;
+    font-size: 60%;
+    overflow-y: overlay;
     background-color: rgba(27, 27, 27, 0.164);
     border-radius: 15px;
-    height: 50%;
-    min-width: 60%;
     transition: all 0.15s ease;
     filter: blur(1px);
 }
 
-.mobile-project-showcase.project-snapped { /* ADDED: Style for snapped tile */
-    transform: scale(1.5); /* Scale up the snapped tile */
+.project-snapped>.mobile-project-showcase { /* ADDED: Style for snapped tile */
+    transform: scale(1.5);
     height: 63%;
     filter: blur(0px);
     background-color: rgb(37, 37, 37);
